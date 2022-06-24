@@ -10,7 +10,8 @@ export async function getStaticProps() {
   return {
     props: {
       allPostsData
-    }
+    },
+    revalidate: 3 * 24 * 60 * 60 // revalidate every 3 days
   }
 }
 
@@ -21,11 +22,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Hello! Software development is my passion ;)</p>
-        <p>
-          (This is a sample website - you'll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
+        <p>{process.env.NEXT_PUBLIC_SITE_DESC}</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
