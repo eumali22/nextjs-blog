@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import SocialBar from './social-bar';
+import SocialBar from './socialBar';
 
 const name = process.env.NEXT_PUBLIC_MY_NAME || 'Configure env vars';
 export const siteTitle = process.env.NEXT_PUBLIC_SITE_TITLE || 'Configure env vars';
