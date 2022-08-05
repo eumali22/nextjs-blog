@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import NeoLayout, { siteTitle } from '../components/neoLayout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
@@ -17,7 +17,7 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
+    <NeoLayout home activeItem="">
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -40,6 +40,6 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
-    </Layout>
+    </NeoLayout>
   );
 }

@@ -1,6 +1,6 @@
 ---
 title: 'Hello World!'
-date: '2022-08-05'
+date: '2022-08-04'
 ---
 
 Hello World! 🤖
