@@ -1,0 +1,10 @@
+
+.socBar {
+  display: flex;
+  justify-content: center;
+}
+
+.socIcon {
+  margin: 10px;
+  display: block;
+}

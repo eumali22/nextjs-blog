@@ -1,8 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from './layout.module.css';
+import utilStyles from '../styles/utils.module.css';
+import Link from 'next/link';
+import SocialBar from './social-bar';
 
 const name = process.env.NEXT_PUBLIC_MY_NAME || 'Configure env vars';
 export const siteTitle = process.env.NEXT_PUBLIC_SITE_TITLE || 'Configure env vars';
@@ -60,6 +61,7 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
+
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
@@ -68,6 +70,9 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+      <footer>
+        <SocialBar />
+      </footer>
     </div>
   )
 }
