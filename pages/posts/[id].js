@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
+import Breadcrumbs from '../../components/breadcrumbs'
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id)
@@ -27,6 +28,7 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
+      <Breadcrumbs ancestors={[['Blog', '/'], [postData.title, null]]}/>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText}>

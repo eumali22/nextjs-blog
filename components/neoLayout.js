@@ -21,7 +21,7 @@ export default function NeoLayout({ children, activeItem, home }) {
       <link rel="icon" href="/favicon.ico" />
       <meta
         name="description"
-        content={process.env.NEXT_PUBLIC_SITE_TITLE}
+        content="Erick Kristofer Umali's website. Contains his blog posts, projects, and more."
       />
       <meta
         property="og:image"
@@ -49,7 +49,9 @@ export default function NeoLayout({ children, activeItem, home }) {
       </nav>
 
       <div className={styles.banner}>
+        <div className={styles.profileWrapper}>
         <Image
+          layout='fill'
           priority
           src="/images/blog_profile.png"
           className={`${utilStyles.borderCircle} ${styles.bannerElement}`}
@@ -57,6 +59,7 @@ export default function NeoLayout({ children, activeItem, home }) {
           width={144}
           alt={name}
         />
+        </div>
         <div className={styles.bannerElement}>
           <h1 className={utilStyles.heading2Xl}>
             {name}
