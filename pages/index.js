@@ -19,7 +19,7 @@ export default function Home({ allPostsData }) {
   return (
     <NeoLayout home activeItem="">
       <Head>
-        <title>{siteTitle}</title>
+        <title>Erick Kristofer's Blog (eumali22)</title>
       </Head>
       <section className={utilStyles.headingMd}>
         <p>{process.env.NEXT_PUBLIC_SITE_DESC}</p>
