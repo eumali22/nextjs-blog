@@ -1,9 +1,39 @@
+
+@media (max-width: 680px) {
+  .profileWrapper {
+    min-width: 100px !important;
+    width: 100px !important;
+    min-height: 100px !important;
+    height: 100px !important;
+  }
+}
+
+@media (max-width: 525px) {
+  .profileWrapper {
+    display: none;
+  }
+
+  .banner {
+    padding: 1.2rem !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .mainNav {
+    font-size: 1rem !important;
+  }
+
+  .navItemAnchor {
+    min-width: 3rem !important;
+  }
+}
+
+
 .banner {
-  padding: 3rem;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   background-color: var(--banner-color);
-  
 }
 
 .profileWrapper {

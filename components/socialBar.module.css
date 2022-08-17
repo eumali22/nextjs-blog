@@ -1,4 +1,10 @@
 
+@media (max-width: 305px) {
+  .socBar {
+    display: none !important;
+  }
+}
+
 .socBar {
   display: flex;
   justify-content: center;
